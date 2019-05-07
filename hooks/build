@@ -1,8 +1,0 @@
-#!/bin/bash
-
-echo "[***] Build hook running"
-
-docker build \
-  --build-arg GLIBC_VERSION=$(git describe --tag --abbrev=0) \
-  -f $DOCKERFILE_PATH \
-  -t $IMAGE_NAME .
